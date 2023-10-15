@@ -30,9 +30,9 @@ public class UserController {
         }        
        
         
-        // var passwordHashered = BCrypt.withDefaults().hashToString(12, userModel.getPassword().toCharArray());
+        var passwordHashered = BCrypt.withDefaults().hashToString(12, userModel.getPassword().toCharArray());
         
-        // userModel.setPassword(passwordHashered.toString());      
+        userModel.setPassword(passwordHashered.toString());      
 
         var userCreated = this.userRepository.save(userModel);       
 
